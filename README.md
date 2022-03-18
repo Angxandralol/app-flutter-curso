@@ -1,2 +1,2 @@
-# app-flutter-curso
-Aplicación creada con el curso de Flutter
+# Curso de Flutter
+Creación de mi primera app con Flutter con [Platzi](https://platzi.com/cursos/flutter/ "Platzi").
