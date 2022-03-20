@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/components/head/gradient-back.dart';
+import 'package:platzi_trips_app/components/review/reviewList.dart';
+import 'components/place/description_place.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,51 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.redAccent,
-          title: Row(
-            children: const [
-              Image(image: AssetImage('assets/back-arrow.png')),
-              Text(" Share"),
+        title: 'Flutter Demo',
+        home: Scaffold(
+          body: Stack(
+            children: [
+              ListView(
+                children: [
+                  DescriptionPlace("Bahamitas", 4,
+                      '''Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. '''),
+                  ReviewList()
+                ],
+              ),
+              GradientBack()
             ],
           ),
-        ),
-        body: Stack(
-          children: <Widget>[
-            Container(
-              width: 500,
-              height: 800,
-              color: Colors.black54,
-            ),
-            _imagenFondo(),
-            _textoCentral()
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _imagenFondo() {
-    return const Image(
-      image: AssetImage('assets/fondo.jpg'),
-      height: double.infinity,
-      width: double.infinity,
-      fit: BoxFit.cover,
-    );
-  }
-
-  Widget _textoCentral() {
-    return Center(
-      child: Container(
-        height: 100,
-        color: Color.fromRGBO(0, 0, 0, 0.5),
-        child: const Center(
-          child: Text('Naughty',
-              style: TextStyle(fontSize: 40, color: Colors.white)),
-        ),
-      ),
-    );
+        ));
   }
 }
