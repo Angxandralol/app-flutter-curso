@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:platzi_trips_app/components/head/header_appbar.dart';
 import 'package:platzi_trips_app/components/review/reviewList.dart';
+import 'package:platzi_trips_app/retos/tercer-reto/content/contentApp.dart';
+import 'package:platzi_trips_app/retos/tercer-reto/header/header-appbar.dart';
 import 'components/place/description_place.dart';
 
 void main() {
@@ -17,8 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        home: Scaffold(
+      title: 'Flutter Demo',
+      //HOME DE LA APLICACION DEL CURSO
+      /*home: Scaffold(
           body: Stack(
             children: [
               ListView(
@@ -31,6 +34,14 @@ class MyApp extends StatelessWidget {
               HeaderAppBar()
             ],
           ),
-        ));
+        )*/
+
+      //HOME DEL TERCER RETO
+      home: Scaffold(
+        body: Stack(
+          children: [HeaderAppbar(), ContentApp()],
+        ),
+      ),
+    );
   }
 }

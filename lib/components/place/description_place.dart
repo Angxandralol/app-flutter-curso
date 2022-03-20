@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/components/place/button-navigate.dart';
 import 'package:platzi_trips_app/components/place/stars.dart';
 import 'package:platzi_trips_app/components/place/title.dart';
 import 'package:platzi_trips_app/components/place/description.dart';
@@ -21,6 +22,9 @@ class DescriptionPlace extends StatelessWidget {
         Container(
           child: new Description(descriptionPlace),
         ),
+        Row(
+          children: [ButtonNavigate()],
+        )
         //Container(child: new ReviewList())
       ],
     );
