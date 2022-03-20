@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      //HOME DE LA APLICACION DEL CURSO
-      /*home: Scaffold(
+        title: 'Flutter Demo',
+        //HOME DE LA APLICACION DEL CURSO
+        home: Scaffold(
           body: Stack(
             children: [
               ListView(
@@ -34,14 +34,14 @@ class MyApp extends StatelessWidget {
               HeaderAppBar()
             ],
           ),
-        )*/
+        )
 
-      //HOME DEL TERCER RETO
-      home: Scaffold(
+        //HOME DEL TERCER RETO
+        /*home: Scaffold(
         body: Stack(
           children: [HeaderAppbar(), ContentApp()],
         ),
-      ),
-    );
+      ),*/
+        );
   }
 }

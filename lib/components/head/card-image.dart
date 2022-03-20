@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/components/head/button_favorite.dart';
 
 class CardImage extends StatelessWidget {
   String pathImage;
@@ -24,6 +25,9 @@ class CardImage extends StatelessWidget {
           ]),
     );
 
-    return card_image;
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: <Widget>[card_image, ButtonFavorite()],
+    );
   }
 }

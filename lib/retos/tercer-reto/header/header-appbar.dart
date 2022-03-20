@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HeaderAppbar extends StatelessWidget {
-  String pathAlbumImage = "assets/inside.jpg";
+  String pathAlbumImage = "assets/inside.webp";
   String pathArtistImage = "assets/foto-perfil.jpg";
   String titleAlbum = "Inside (Deluxe)";
   String artist = "Mother Mother";
@@ -9,7 +9,7 @@ class HeaderAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final gradientBackground = Container(
-      height: 450.0,
+      height: 510.0,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [
@@ -28,7 +28,7 @@ class HeaderAppbar extends StatelessWidget {
       margin: EdgeInsets.only(top: 50.0, left: 115.0),
       decoration: BoxDecoration(
           image: DecorationImage(
-              fit: BoxFit.cover, image: AssetImage(pathArtistImage)),
+              fit: BoxFit.cover, image: AssetImage(pathAlbumImage)),
           shape: BoxShape.rectangle,
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -38,8 +38,20 @@ class HeaderAppbar extends StatelessWidget {
           ]),
     );
 
+    final title_album = Container(
+      margin: EdgeInsets.only(top: 380.0, left: 20.0),
+      child: Text(
+        titleAlbum,
+        style: TextStyle(
+            fontFamily: "Lato",
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white),
+      ),
+    );
+
     final header = Stack(
-      children: [gradientBackground, albumImage],
+      children: [gradientBackground, albumImage, title_album],
     );
 
     return header;
