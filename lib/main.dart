@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:platzi_trips_app/components/head/gradient-back.dart';
 import 'package:platzi_trips_app/components/review/reviewList.dart';
 import 'components/place/description_place.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(const MyApp());
 }
 

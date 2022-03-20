@@ -22,12 +22,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/back-arrow.png
-    - assets/cotton-candy.jpg
-    - assets/fondo.jpg
-    - assets/foto-perfil.jpg
-    - assets/shark.jpeg
-    - assets/sweet-potato.jpg
+    - assets/
   fonts:
     - family: Lato
       fonts:
