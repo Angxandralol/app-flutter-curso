@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:platzi_trips_app/components/head/header_appbar.dart';
-import 'package:platzi_trips_app/components/review/reviewList.dart';
-import 'package:platzi_trips_app/retos/tercer-reto/content/contentApp.dart';
-import 'package:platzi_trips_app/retos/tercer-reto/header/header-appbar.dart';
-import 'components/place/description_place.dart';
+import 'package:platzi_trips_app/Platzi_trips_cupertino.dart';
+import 'package:platzi_trips_app/PlaziTrips.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -18,30 +15,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        //HOME DE LA APLICACION DEL CURSO
-        home: Scaffold(
-          body: Stack(
-            children: [
-              ListView(
-                children: [
-                  DescriptionPlace("Bahamitas", 4,
-                      '''Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. '''),
-                  ReviewList()
-                ],
-              ),
-              HeaderAppBar()
-            ],
-          ),
-        )
-
-        //HOME DEL TERCER RETO
-        /*home: Scaffold(
-        body: Stack(
-          children: [HeaderAppbar(), ContentApp()],
-        ),
-      ),*/
-        );
+    return MaterialApp(title: 'Flutter Demo', home: PlatziTripsCupertino());
   }
 }

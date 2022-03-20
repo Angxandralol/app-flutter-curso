@@ -13,10 +13,13 @@ class _ButtonFavorite extends State<ButtonFavorite> {
   void onPressedFavorite() {
     setState(() {
       _pressed = !this._pressed;
+
       if (_pressed == true) {
+        Scaffold.of(context).hideCurrentSnackBar();
         Scaffold.of(context)
             .showSnackBar(SnackBar(content: Text("Agregaste a tus favoritos")));
       } else {
+        Scaffold.of(context).hideCurrentSnackBar();
         Scaffold.of(context).showSnackBar(
             SnackBar(content: Text("Eliminaste de tus favoritos")));
       }
